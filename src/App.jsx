@@ -1,24 +1,17 @@
-import "./App.css";
+import "./styles/App.css";
 import { useEffect, useState } from "react";
 import InstagramEmbed from "./InstagramEmbed";
 import hero from "./assets/hero.webp";
-import food1 from "./assets/food1.jpg";
-import food2 from "./assets/food2.jpg";
-import drink1 from "./assets/drink1.jpg";
-import food3 from "./assets/food3.jpg";
-import food4 from "./assets/food4.jpg";
-import food5 from "./assets/food5.jpg";
-import girl from "./assets/girl.webp";
-import girl2 from "./assets/girl2.webp";
-import paint from "./assets/paint.webp";
 import menuImage from "./assets/menu.jpg";
 import header from "./assets/lefthero.jpg";
 import foodheader from "./assets/foodheader.jpg";
 
+import Gallery from "./Gallery";
+import galleryImages from "./GalleryImages";
+
 export default function App() {
   const [popupImage, setPopupImage] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
 
   useEffect(() => {
     const menuItems = document.querySelectorAll(".menu-section .menu-item");
@@ -69,12 +62,6 @@ export default function App() {
   const embedHtml1 = `<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCrFRjyorfP/" data-instgrm-version="14" data-instgrm-captioned></blockquote>`;
   const embedHtml2 = `<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFIY8cJtZaz/" data-instgrm-version="14" data-instgrm-captioned></blockquote>`;
   const embedHtml3 = `<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCAJmA0Nojc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" data-instgrm-captioned></blockquote>`;
-
-  const galleryImages = [
-    food1, girl, food2, paint, food5,
-    girl2, paint, drink1, food3, drink1,
-    food4, drink1, girl2, food5, girl
-  ];
 
   return (
     <div className="container">
@@ -132,49 +119,34 @@ export default function App() {
         </div>
       </section>
 
-{/* FEATURED INSTAGRAM REEL */}
-<section className="featured-reel-section">
-  <div className="featured-reel-container">
-    <div className="featured-reel-wrapper">
-      <iframe
-        src="https://www.instagram.com/p/DDe1e3-t_sK/embed"
-        title="Sticky Rice Reel"
-        loading="lazy"
-        width="400"
-        height="500" 
-        style={{ border: 'none', overflow: 'hidden' }}
-        allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+      {/* FEATURED INSTAGRAM REEL */}
+      <section className="featured-reel-section">
+        <div className="featured-reel-container">
+          <div className="featured-reel-wrapper">
+            <iframe
+              src="https://www.instagram.com/p/DDe1e3-t_sK/embed"
+              title="Sticky Rice Reel"
+              loading="lazy"
+              width="400"
+              height="500" 
+              style={{ border: 'none', overflow: 'hidden' }}
+              allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
 
-    <div className="featured-reel-text">
-      <h3>Let’s cook some sticky rice 🍚</h3>
-      <p>
-        Learn the secrets to perfect sticky rice like the pros! Fresh, fun, and flavorful – your taste buds will thank you. <br/>
-        Click or Press the video to play
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-      {/* GALLERY */}
-      <section id="gallery" className="gallery-section edgy-gallery">
-        <h3>Sáu Snapshots</h3>
-        <div className="gallery-grid">
-          {galleryImages.map((img, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt="Gallery item"
-              onClick={() => setPopupImage(img)}
-            />
-          ))}
+          <div className="featured-reel-text">
+            <h3>Let’s cook some sticky rice 🍚</h3>
+            <p>
+              Learn the secrets to perfect sticky rice like the pros! Fresh, fun, and flavorful – your taste buds will thank you. <br/>
+              Click or Press the video to play
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* GALLERY */}
+      <Gallery images={galleryImages} onImageClick={setPopupImage} />
 
       {/* IMAGE POPUP */}
       {popupImage && (
@@ -194,22 +166,22 @@ export default function App() {
         </div>
         <div className="menu-grid">
           <div className="menu-item">
-            <img src={food1} alt="Bánh Mì Thịt" />
+            <img src={galleryImages[0]} alt="Bánh Mì Thịt" />
             <h4>BÁNH MÌ THỊT — 11.90€</h4>
             <p>Pork meatballs, carrots, cucumber, pâté, coriander, mayo.</p>
           </div>
           <div className="menu-item">
-            <img src={food2} alt="Bánh Mì Op La" />
+            <img src={galleryImages[2]} alt="Bánh Mì Op La" />
             <h4>BÁNH MÌ ỐP LA — 7.90€</h4>
             <p>Sunny-side eggs, carrots, cucumber, mayo, coriander.</p>
           </div>
           <div className="menu-item">
-            <img src={food1} alt="Bún Chay" />
+            <img src={galleryImages[0]} alt="Bún Chay" />
             <h4>BÚN CHAY — 11.90€</h4>
             <p>Rice noodles, tofu, peanuts, herbs, veggies.</p>
           </div>
           <div className="menu-item">
-            <img src={food2} alt="Xôi Mặn" />
+            <img src={galleryImages[2]} alt="Xôi Mặn" />
             <h4>XÔI MẶN — 12.90€</h4>
             <p>Sticky rice, shrimp, sausage, fried shallots.</p>
           </div>
@@ -221,22 +193,22 @@ export default function App() {
         <h4>Drinks</h4>
         <div className="menu-grid">
           <div className="menu-item">
-            <img src={drink1} alt="Milk Tea" />
+            <img src={galleryImages[7]} alt="Milk Tea" />
             <h4>Milk Tea — 5.90€</h4>
             <p>Black tea with milk and tapioca pearls.</p>
           </div>
           <div className="menu-item">
-            <img src={drink1} alt="Matcha" />
+            <img src={galleryImages[7]} alt="Matcha" />
             <h4>Matcha — 5.90€</h4>
             <p>Japanese matcha with tapioca pearls.</p>
           </div>
           <div className="menu-item">
-            <img src={drink1} alt="Dirty Milk" />
+            <img src={galleryImages[7]} alt="Dirty Milk" />
             <h4>Dirty Milk — 6.50€</h4>
             <p>Fresh milk with brown sugar.</p>
           </div>
           <div className="menu-item">
-            <img src={drink1} alt="Fruity Boba" />
+            <img src={galleryImages[7]} alt="Fruity Boba" />
             <h4>Fruity Boba — 5.90€</h4>
             <p>Tea-based drink with fruit flavors.</p>
           </div>

@@ -1,0 +1,55 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.links a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+}
+
+.links a:hover {
+  color: #bb9f02;
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 6px 13px;
+  border-radius: 4px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #bb9f02;
+  color: #000000 !important;
+}
+
+.btn-primary {
+  background: #ff2a6d;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
