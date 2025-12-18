@@ -235,11 +235,21 @@ export default function App() {
       </section>
 
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <p>6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00</p>
-        <a href="https://instagram.com/thevsnackn6_antibes" target="_blank">Instagram</a>
-      </footer>
+     {/* FOOTER */}
+<footer className="footer">
+  <div className="footer-content">
+    <p>6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00</p>
+    <div className="footer-links">
+      <a href="https://instagram.com/thevsnackn6_antibes" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+    </div>
+    <p className="footer-copyright">
+      &copy; {new Date().getFullYear()} Sáu (Le 6) Antibes. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 }
