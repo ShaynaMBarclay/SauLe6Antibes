@@ -16,6 +16,21 @@ import galleryImages from "./GalleryImages";
 export default function App() {
   const [popupImage, setPopupImage] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [navScrolled, setNavScrolled] = useState(false);
+
+  useEffect(() => {
+  const onScroll = () => {
+    if (!navScrolled && window.scrollY > 80) {
+      setNavScrolled(true);
+    } else if (navScrolled && window.scrollY < 30) {
+      setNavScrolled(false);
+    }
+  };
+
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, [navScrolled]);
+
 
   useEffect(() => {
     const menuItems = document.querySelectorAll(".menu-section .menu-item");
@@ -70,15 +85,21 @@ export default function App() {
   return (
     <div className="container">
       {/* NAV */}
-      <header className="nav">
-        <h1 className="logo">Sáu (Le 6) Antibes</h1>
-        <nav className="links">
-          <a href="#gallery">Gallery</a>
-          <a href="#menu">Menu</a>
-          <a href="#drinks">Drinks</a>
-          <a href="#find-us" className="btn-outline">Find us</a>
-        </nav>
-      </header>
+      <header className={`nav ${navScrolled ? "nav--scrolled" : ""}`}>
+    <h1
+    className="logo"
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  >
+    Sáu (Le 6) Antibes
+  </h1>
+  <nav className="links">
+    <a href="#gallery">Gallery</a>
+    <a href="#menu">Menu</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#find-us" className="btn-outline">Find us</a>
+  </nav>
+</header>
+
 
       {/* HERO */}
 <section className="hero hero-two-images">
