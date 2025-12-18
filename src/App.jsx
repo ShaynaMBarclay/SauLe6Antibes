@@ -5,6 +5,9 @@ import hero from "./assets/hero.webp";
 import menuImage from "./assets/menu.jpg";
 import header from "./assets/lefthero.jpg";
 import foodheader from "./assets/foodheader.jpg";
+import MenuPage from "./MenuPage";
+import DrinksPage from "./DrinksPage";
+
 
 import Gallery from "./Gallery";
 import galleryImages from "./GalleryImages";
@@ -159,61 +162,15 @@ export default function App() {
       )}
 
       {/* MENU */}
-      <section id="menu" className="menu-section">
-        <h3>The Spread</h3>
-        <div className="full-menu">
-          <img src={menuImage} alt="Full menu" />
-        </div>
-        <div className="menu-grid">
-          <div className="menu-item">
-            <img src={galleryImages[0]} alt="Bánh Mì Thịt" />
-            <h4>BÁNH MÌ THỊT — 11.90€</h4>
-            <p>Pork meatballs, carrots, cucumber, pâté, coriander, mayo.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[2]} alt="Bánh Mì Op La" />
-            <h4>BÁNH MÌ ỐP LA — 7.90€</h4>
-            <p>Sunny-side eggs, carrots, cucumber, mayo, coriander.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[0]} alt="Bún Chay" />
-            <h4>BÚN CHAY — 11.90€</h4>
-            <p>Rice noodles, tofu, peanuts, herbs, veggies.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[2]} alt="Xôi Mặn" />
-            <h4>XÔI MẶN — 12.90€</h4>
-            <p>Sticky rice, shrimp, sausage, fried shallots.</p>
-          </div>
-        </div>
-      </section>
+      <section id="menu">
+  <MenuPage />
+</section>
 
       {/* DRINKS */}
-      <section id="drinks" className="drinks-section">
-        <h4>Drinks</h4>
-        <div className="menu-grid">
-          <div className="menu-item">
-            <img src={galleryImages[7]} alt="Milk Tea" />
-            <h4>Milk Tea — 5.90€</h4>
-            <p>Black tea with milk and tapioca pearls.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[7]} alt="Matcha" />
-            <h4>Matcha — 5.90€</h4>
-            <p>Japanese matcha with tapioca pearls.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[7]} alt="Dirty Milk" />
-            <h4>Dirty Milk — 6.50€</h4>
-            <p>Fresh milk with brown sugar.</p>
-          </div>
-          <div className="menu-item">
-            <img src={galleryImages[7]} alt="Fruity Boba" />
-            <h4>Fruity Boba — 5.90€</h4>
-            <p>Tea-based drink with fruit flavors.</p>
-          </div>
-        </div>
-      </section>
+      <section id="drinks">
+  <DrinksPage />
+</section>
+
 
       {/* FOOTER */}
       <footer className="footer">
