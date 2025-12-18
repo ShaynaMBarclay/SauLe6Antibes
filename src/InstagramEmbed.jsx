@@ -1,29 +1,29 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function InstagramEmbed({ embedHtml }) {
   const containerRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.innerHTML = embedHtml;
+    setMounted(true); 
+  }, []);
 
-      const existingScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
-      if (!existingScript) {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "//www.instagram.com/embed.js";
-        document.body.appendChild(script);
-      } else {
-        if (window.instgrm) {
-          window.instgrm.Embeds.process();
-        }
-      }
+  useEffect(() => {
+    if (!mounted || !containerRef.current) return;
+
+    containerRef.current.innerHTML = embedHtml;
+
+    if (!document.querySelector('script[src="https://www.instagram.com/embed.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://www.instagram.com/embed.js";
+      script.async = true;
+      script.onload = () => window.instgrm?.Embeds?.process();
+      document.body.appendChild(script);
+    } else {
+      
+      window.instgrm?.Embeds?.process();
     }
-  }, [embedHtml]);
+  }, [embedHtml, mounted]);
 
-  return (
-    <div className="instagram-wrapper">
-      <div ref={containerRef}></div>
-    </div>
-  );
+  return <div className="instagram-wrapper"><div ref={containerRef}></div></div>;
 }

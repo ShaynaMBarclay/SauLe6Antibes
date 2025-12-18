@@ -7,13 +7,14 @@
 }
 
 .vibe-img-wrapper {
-   max-width: 450px;
+   max-width: 350px;
   display: inline-block;
   border: 4px solid #bb9f02;
   border-radius: 14px;
   overflow: hidden;
   transform: scale(1);
   transition: transform 0.5s ease, filter 0.5s ease;
+  margin-left: 10rem;
 }
 
 @keyframes popImage {
@@ -37,7 +38,7 @@
 
 .vibe-text h2 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 3.4rem;
+  font-size: 3rem;
   margin-bottom: 14px;
   color: white; 
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -81,7 +82,6 @@
   align-items: center;
 }
 
-
 .instagram-wrapper {
   width: 100%;
   max-width: 400px;
@@ -89,9 +89,12 @@
   overflow: hidden;
   padding: 4px;
   background: #000;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
   will-change: transform, box-shadow; 
+}
+
+.instagram-wrapper:hover {
+ box-shadow: 0 15px 40px rgba(187, 159, 2, 0.7), 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .instagram-wrapper blockquote.instagram-media {
@@ -105,31 +108,24 @@
   border: none;
 }
 
-/* Hover effect */
-.instagram-wrapper:hover {
-  transform: scale(1.025); 
-  box-shadow: 0 10px 25px rgba(187, 159, 2, 0.5);
-}
-
 /* FEATURED REEL SIDE-BY-SIDE */
 .featured-reel-container {
   display: flex;
   flex-wrap: wrap; 
   align-items: flex-start;
   justify-content: center;
-  gap: 200px; 
-  margin-bottom: 40px; 
+  gap: 10rem; 
+  margin-top: 6rem;
 }
 
 .featured-reel-wrapper {
   position: relative;
-  flex: 1 1 500px; 
-  max-width: 600px; 
+  flex: 1 1 300px; 
+  max-width: 450px; 
   border-radius: 14px;
   overflow: hidden;
 }
 
-/* maintain 9:16 aspect ratio for reel */
 .featured-reel-wrapper::before {
   content: "";
   display: block;
@@ -141,26 +137,28 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 78%;
+  height: 90%; 
   border: none;
 }
 
 .featured-reel-text {
-  flex: 1 1 250px; 
+  flex: 1 1 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 450px; 
+  margin: 0 10px;
 }
 
 .featured-reel-text h3 {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 5rem;
-  margin-bottom: 15px;
-  color: #ffffff;
+  font-size: 2.8rem; /* slightly smaller */
+  margin-bottom: 0.5rem;
+  color:#ffea00;
 }
 
 .featured-reel-text p {
-  font-size: 2.5rem;
-  line-height: 1.5;
+  font-size: 1.6rem; /* smaller text */
+  line-height: 1.4;
   color: #cfcfcf;
 }

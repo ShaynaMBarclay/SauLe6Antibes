@@ -1,8 +1,9 @@
 import "./styles/App.css";
 import { useEffect, useState } from "react";
 import InstagramEmbed from "./InstagramEmbed";
-import hero from "./assets/hero.webp";
-import menuImage from "./assets/menu.jpg";
+import hero from "./assets/images/25.jpg";
+import hero3 from "./assets/images/29.jpg"
+import hero2 from "./assets/images/44.jpg"
 import header from "./assets/lefthero.jpg";
 import foodheader from "./assets/foodheader.jpg";
 import MenuPage from "./MenuPage";
@@ -80,16 +81,22 @@ export default function App() {
       </header>
 
       {/* HERO */}
-      <section className="hero">
-        <img src={hero} alt="Restaurant food" className="hero-img" />
-        <div className="hero-text">
-          <h2>Colorful Vietnamese Street Food</h2>
-          <p>Minimal design. Max flavor. Fresh bowls, crispy rolls, bold drinks.</p>
-          <div className="hero-buttons">
-            <a href="#menu" className="btn-outline">View Menu</a>
-          </div>
-        </div>
-      </section>
+<section className="hero hero-two-images">
+  <div className="hero-images">
+    <div className="hero-images">
+  <img src={hero} alt="Left hero" className="hero-img hero-left" />
+  <img src={hero2} alt="Middle hero" className="hero-img hero-middle" />
+  <img src={hero3} alt="Right hero" className="hero-img hero-right" />
+</div>
+  </div>
+  <div className="hero-text">
+    <h2>Street food elevated</h2>
+    <p>Savage flavours only. Soft bread, hot fillings, zero mercy.</p>
+    <div className="hero-buttons">
+      <a href="#menu" className="btn-outline">View Menu</a>
+    </div>
+  </div>
+</section>
 
       {/* VIBE SECTIONS */}
       <section className="vibe-section">
@@ -97,8 +104,8 @@ export default function App() {
           <img src={header} alt="Brand vibe" className="vibe-img" />
         </div>
         <div className="vibe-text">
-          <h2>Street food with an edge.</h2>
-          <p>FRUITY BOBA – LIGHT, REFRESHING, DELICIOUS</p>
+          <h2>Your taste buds called and they’re done being polite.</h2>
+          <p>They want bold Vietnamese flavours, sizzling toppings, and that SAU-level crunch.</p>
         </div>
       </section>
 
@@ -107,8 +114,8 @@ export default function App() {
           <img src={foodheader} alt="Modern Vietnamese Craft" className="vibe-img" />
         </div>
         <div className="vibe-text">
-          <h2>Crafted with character.</h2>
-          <p>🔥 BÁNH MÌ THỊT – THE REAL DEAL 🔥</p>
+          <h2>Your favourite bite!</h2>
+          <p>🔥  It starts with crunch, ends with “holy sh*t,” and lives in the middle of Antibes.🔥</p>
         </div>
       </section>
 
