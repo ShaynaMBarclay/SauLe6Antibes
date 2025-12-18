@@ -1,7 +1,19 @@
+import menuImage from "./assets/menu.jpg"; 
+
 export default function MenuPage() {
+  
   return (
     <div className="menu-container">
       <h1 className="menu-title">Menu</h1>
+
+      
+      <div className="menu-image-wrapper">
+        <img
+          src={menuImage}
+          alt="Full Menu"
+          className="menu-image"
+        />
+      </div>
 
       {/* BÁNH MÌ */}
       <section>
