@@ -168,15 +168,50 @@ export default function App() {
         </div>
       )}
 
+      {/* LOCATION */}
+<section className="location-section" id="contact">
+  <h3>Find Us</h3>
+
+  <div className="location-wrapper">
+    <iframe
+      title="Sáu Antibes Location"
+      src="https://www.google.com/maps?q=6%20Rue%20Fourmillière%2C%20Antibes&output=embed"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div className="map-buttons">
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=6+Rue+Fourmillière,+Antibes"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-outline"
+    >
+      Open in Google Maps
+    </a>
+
+    <a
+      href="https://maps.apple.com/?q=6+Rue+Fourmillière,+Antibes"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-outline"
+    >
+      Open in Apple Maps
+    </a>
+  </div>
+</section>
+
+
       {/* MENU */}
       <section id="menu">
-  <MenuPage />
-</section>
+      <MenuPage />
+      </section>
 
       {/* DRINKS */}
       <section id="drinks">
-  <DrinksPage />
-</section>
+      <DrinksPage />
+      </section>
 
 
       {/* FOOTER */}
