@@ -76,7 +76,7 @@ export default function App() {
           <a href="#gallery">Gallery</a>
           <a href="#menu">Menu</a>
           <a href="#drinks">Drinks</a>
-          <a href="#contact" className="btn-outline">Contact</a>
+          <a href="#find-us" className="btn-outline">Find us</a>
         </nav>
       </header>
 
@@ -169,7 +169,7 @@ export default function App() {
       )}
 
       {/* LOCATION */}
-<section className="location-section" id="contact">
+  <section className="location-section" id="find-us">
   <h3>Find Us</h3>
 
   <div className="location-wrapper">
