@@ -1,3 +1,4 @@
+/* VIBE SECTION */
 .vibe-section {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -34,7 +35,6 @@
   height: auto;  
   object-fit: contain;
 }
-
 
 .vibe-text h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -74,7 +74,6 @@
 }
 
 /* INSTAGRAM EMBEDS */
-
 .highlight-section {
   padding: 40px 20px;
   text-align: center;
@@ -140,16 +139,43 @@
 .featured-reel-wrapper::before {
   content: "";
   display: block;
-  padding-top: 177.78%; 
+  padding-top: 75vh;
 }
 
-.featured-reel-wrapper iframe {
+.featured-reel-wrapper iframe.desktop-reel {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%; 
+  height: 100%; 
   border: none;
+}
+
+/* Mobile/Tablet Button */
+.mobile-reel-wrapper {
+  display: none;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.mobile-reel-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ffea00, #d4c100);
+  color: #1e1e1e;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(187, 159, 2, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-reel-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(187, 159, 2, 0.8);
 }
 
 .featured-reel-text {
@@ -208,26 +234,12 @@
     max-width: 350px;
   }
 
-  .featured-reel-container {
-    gap: 6rem; 
-    margin-top: 4rem;
-  }
-
-  .featured-reel-wrapper {
-    max-width: 400px;
-  }
-
-  .featured-reel-text {
-    max-width: 400px;
-    margin: 0 8px;
-  }
-
-  .featured-reel-text h3 {
-    font-size: 2.4rem;
-  }
-
-  .featured-reel-text p {
-    font-size: 1.4rem;
+  .featured-reel-container,
+  .featured-reel-section,
+  .featured-reel-wrapper,
+  .featured-reel-text,
+  .mobile-reel-wrapper {
+    display: none !important;
   }
 }
 
@@ -246,9 +258,9 @@
     margin: 0 auto;  
   }
 
-    .instagram-wrapper iframe { 
+  .instagram-wrapper iframe { 
     height: 100vh;  
-    }
+  }
 
   .vibe-text h2 {
     font-size: 2rem;
@@ -272,25 +284,6 @@
     padding: 2px;
   }
 
-  .featured-reel-container {
-    flex-direction: column; 
-    gap: 3rem;
-    margin-top: 3rem;
-  }
-
-  .featured-reel-wrapper,
-  .featured-reel-text {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .featured-reel-text h3 {
-    font-size: 2rem;
-  }
-
-  .featured-reel-text p {
-    font-size: 1.2rem;
-  }
 }
 
 /* SMALL MOBILE / VERY NARROW SCREENS */
@@ -307,13 +300,4 @@
     font-size: 1.2rem;
     padding: 15px 8px;
   }
-
-  .featured-reel-text h3 {
-    font-size: 1.6rem;
-  }
-
-  .featured-reel-text p {
-    font-size: 1rem;
-  }
 }
-

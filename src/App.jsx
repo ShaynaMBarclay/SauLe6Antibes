@@ -202,33 +202,40 @@ View this post on Instagram
         </div>
       </section>
 
-      {/* FEATURED REEL */}
-      <section className="featured-reel-section">
-        <div className="featured-reel-container">
-          <div className="featured-reel-wrapper">
-            <iframe
-              src="https://www.instagram.com/p/DDe1e3-t_sK/embed"
-              title="Sticky Rice Reel"
-              loading="lazy"
-              width="400"
-              height="500"
-              style={{ border: "none", overflow: "hidden" }}
-              allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+    {/* FEATURED REEL */}
+<section className="featured-reel-section">
+  <div className="featured-reel-container">
 
-          <div className="featured-reel-text">
-            <h3>Let’s cook some sticky rice 🍚</h3>
-            <p>
-              Learn the secrets to perfect sticky rice like the pros! Fresh, fun,
-              and flavorful – your taste buds will thank you.
-              <br />
-              Click or Press the video to play
-            </p>
-          </div>
-        </div>
-      </section>
+    {/* Desktop iframe */}
+    <div className="featured-reel-wrapper">
+      <iframe
+        src="https://www.instagram.com/p/DDe1e3-t_sK/embed"
+        title="Sticky Rice Reel"
+        loading="lazy"
+        width="400"
+        height="500"
+        className="desktop-reel"
+        style={{ border: "none", overflow: "hidden" }}
+        allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+
+    {/* Text */}
+    <div className="featured-reel-text">
+      <h3>Let’s cook some sticky rice 🍚</h3>
+      <p>
+        Learn the secrets to perfect sticky rice like the pros! Fresh, fun,
+        and flavorful – your taste buds will thank you.
+        <br />
+        Click or Press the video to play
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
       {/* GALLERY */}
       <Gallery images={galleryImages} onImageClick={setPopupImage} />
