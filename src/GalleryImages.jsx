@@ -8,7 +8,7 @@ import girl from "./assets/girl.webp";
 import girl2 from "./assets/girl2.webp";
 import paint from "./assets/paint.webp";
 
-import pic1 from "./assets/images/1.jpg"
+
 import pic2 from "./assets/images/2.jpg"
 import pic3 from "./assets/images/3.jpg"
 import pic4 from "./assets/images/4.jpg"
@@ -37,7 +37,7 @@ import pic26 from "./assets/images/26.jpg"
 import pic27 from "./assets/images/27.jpg"
 import pic28 from "./assets/images/28.jpg"
 import pic29 from "./assets/images/29.jpg"
-import pic30 from "./assets/images/31.jpg"
+import pic30 from "./assets/images/30.jpg"
 import pic31 from "./assets/images/31.jpg"
 import pic32 from "./assets/images/32.jpg"
 import pic33 from "./assets/images/33.jpg"
@@ -71,8 +71,9 @@ import pic63 from "./assets/images/63.jpg"
 
 
 
+
 const galleryImages = [
- pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28, pic29, pic30, pic31, pic32, pic33, pic34, pic35, pic36, pic37, pic38, pic39, pic42, pic43, pic44, pic45, pic46, pic47, pic48, pic49, pic50, pic51, pic52, pic53, pic55, pic56, pic57, pic59, pic60, pic61, pic62, pic63
+ pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28, pic29, pic30, pic31, pic32, pic33, pic34, pic36, pic37, pic38, pic39, pic42, pic43, pic44, pic45, pic46, pic47, pic48, pic49, pic50, pic51, pic52, pic53, pic55, pic56, pic57, pic59, pic60, pic61, pic62, pic63,
 ];
 
 export default galleryImages;

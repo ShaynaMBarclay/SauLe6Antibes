@@ -81,6 +81,7 @@
   transform: translateY(0) rotate(0deg);
 }
 
+
 /* Random tilt on load */
 .edgy-gallery .gallery-grid img:nth-child(odd) {
   transform: rotate(-2deg);
@@ -141,4 +142,120 @@
   font-weight: bold;
   text-align: center;
   z-index: 1000;  
+}
+
+/* Base fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px) rotate(var(--initial-rotate, 0deg));
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+.gallery-subtext {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.gallery-subtext a {
+  color: #ffea00;
+  text-decoration: underline;
+}
+
+.gallery-subtext a:hover {
+  color: #ffc107;
+}
+
+
+
+/* TABLET: 768px – 1024px */
+@media (max-width: 1024px) {
+  .gallery-section {
+    padding: 30px 20px;
+  }
+
+  .gallery-section h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .gallery-grid img {
+    height: 180px;
+  }
+
+  .edgy-gallery .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .edgy-gallery .gallery-grid img {
+    height: 180px;
+  }
+}
+
+/* MOBILE: below 768px */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 20px 10px;
+  }
+
+  .gallery-section h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .gallery-grid img {
+    height: 140px;
+  }
+
+  .edgy-gallery .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .edgy-gallery .gallery-grid img {
+    height: 140px;
+  }
+}
+
+/* SMALL MOBILE / VERY NARROW SCREENS: below 480px */
+@media (max-width: 480px) {
+  .gallery-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-grid {
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .gallery-grid img {
+    height: 120px;
+  }
+
+  .edgy-gallery .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .edgy-gallery .gallery-grid img {
+    height: 120px;
+  }
 }

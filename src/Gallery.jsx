@@ -30,25 +30,39 @@ export default function Gallery({ images, onImageClick }) {
     imgs.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
-  }, [visibleImages]); 
+  }, [visibleImages]);
+
   return (
     <section id="gallery" className="gallery-section edgy-gallery" ref={galleryRef}>
       <h3>Sáu Snapshots</h3>
+       <p className="gallery-subtext">
+    view the full gallery <a href="https://www.instagram.com/thevsnackn6_antibes/" target="_blank" rel="noopener noreferrer">here</a>
+  </p>
 
       <div className="gallery-grid">
-        {visibleImages.map((img, idx) => (
-          <img
-            key={startIndex + idx}
-            src={img}
-            alt={`Gallery item ${startIndex + idx + 1}`}
-            loading="lazy"
-            onClick={() => onImageClick(img)}
-            style={{ "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg" }}
-          />
-        ))}
+        {visibleImages.map((img, idx) => {
+          const src = typeof img === "object" ? img.desktop || img.mobile : img;
+          const srcMobile = typeof img === "object" ? img.mobile : img;
+
+          return (
+            <img
+              key={startIndex + idx}
+              src={src}
+              srcSet={srcMobile ? `${srcMobile} 480w, ${src} 800w` : undefined}
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              alt={`Gallery item ${startIndex + idx + 1}`}
+              loading="lazy"
+              onClick={() => onImageClick(typeof img === "object" ? src : img)}
+              style={{
+                "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg",
+              }}
+              className="fade-in"
+              onLoad={(e) => e.target.classList.add("animate")}
+            />
+          );
+        })}
       </div>
 
-      {/* CENTERED ARROWS */}
       <div className="gallery-arrows">
         {hasPrev && (
           <button
@@ -59,7 +73,6 @@ export default function Gallery({ images, onImageClick }) {
             ←
           </button>
         )}
-
         {hasNext && (
           <button
             className="gallery-arrow"
