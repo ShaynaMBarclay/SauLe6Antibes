@@ -1,0 +1,22 @@
+/* IMAGE-BASED FLAVOR FEED 
+.highlight-images .image-highlight-item {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.highlight-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.highlight-images .image-highlight-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(187, 159, 2, 0.45);
+}
+*/

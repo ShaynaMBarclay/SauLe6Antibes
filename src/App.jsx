@@ -15,6 +15,10 @@ import DrinksPage from "./DrinksPage";
 import Gallery from "./Gallery";
 import galleryImages from "./GalleryImages";
 
+import flavorFeed1 from "./assets/images/flavorfeed1.jpg";
+import flavorFeed2 from "./assets/images/flavorfeed2.jpg";
+import flavorFeed3 from "./assets/images/flavorfeed3.jpg"
+
 export default function App() {
   const [popupImage, setPopupImage] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -201,6 +205,45 @@ View this post on Instagram
           </div>
         </div>
       </section>
+
+      { /* TEST */}
+      {/* INSTAGRAM HIGHLIGHTS */}
+{/* FLAVOR FEED — IMAGE LINKS 
+<section className="highlight-section highlight-images">
+  <h3>Click to view our flavor Feed</h3>
+
+  <div className="highlight-grid">
+    <a
+      href="https://www.instagram.com/p/DCMe9dBtKlv/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="image-highlight-item"
+    >
+      <img src={flavorFeed1} alt="Flavor post 1" />
+    </a>
+
+    <a
+      href="https://www.instagram.com/p/DF4_f97tf9F/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="image-highlight-item"
+    >
+      <img src={flavorFeed2} alt="Flavor post 2" />
+    </a>
+    
+
+    <a
+      href="https://www.instagram.com/p/DCrFRjyorfP/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="image-highlight-item"
+    >
+      <img src={flavorFeed3} alt="Flavor post 3" />
+    </a>
+  </div>
+</section>
+/*}
+
 
     {/* FEATURED REEL */}
 <section className="featured-reel-section">
