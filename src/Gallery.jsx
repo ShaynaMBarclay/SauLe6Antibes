@@ -55,17 +55,20 @@ export default function Gallery({ images, onImageClick }) {
       <div className="gallery-grid">
         {visibleImages.map((img, idx) => (
           <img
-            key={startIndex + idx}
-            src={img.desktop || img}
-            srcSet={img.mobile ? `${img.mobile} 480w, ${img.desktop} 800w` : undefined}
-            sizes="(max-width: 480px) 33vw, (max-width: 1024px) 25vw, 20vw"
-            alt={`Gallery item ${startIndex + idx + 1}`}
-            loading="lazy"
-            onClick={() => onImageClick(img)}
-            style={{ "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg" }}
-            className="fade-in"
-            onLoad={(e) => e.target.classList.add("animate")}
-          />
+  key={startIndex + idx}
+  src={img.desktop || img}
+  srcSet={img.mobile ? `${img.mobile} 480w, ${img.desktop} 800w` : undefined}
+  sizes="(max-width: 480px) 33vw, (max-width: 1024px) 25vw, 20vw"
+  alt={`Gallery item ${startIndex + idx + 1}`}
+  loading="lazy"
+  onClick={() => onImageClick(img)}
+  style={{
+    "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg",
+    "--fade-delay": `${idx * 0.1}s` 
+  }}
+  className="fade-in"
+  onLoad={(e) => e.target.classList.add("animate")}
+/>
         ))}
       </div>
 
