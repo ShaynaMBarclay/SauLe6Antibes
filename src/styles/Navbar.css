@@ -78,3 +78,74 @@
 .btn-primary:hover {
   opacity: 0.85;
 }
+
+/* =========================
+   NAVBAR RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 8px 16px;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+
+  .nav--scrolled {
+    padding: 2px 9px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav--scrolled .logo {
+    font-size: 1rem;
+  }
+
+  .links a {
+    margin-left: 16px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .nav--scrolled .links a {
+    font-size: 0.75rem;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .links .btn-outline {
+    margin-top: 10px; 
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 6px 12px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .links a {
+    margin-left: 12px;
+    font-size: 0.78rem;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}

@@ -214,3 +214,97 @@ body::-webkit-scrollbar-thumb:hover {
   scrollbar-color: #bb9f02 #141416; 
 }
 
+/* =========================
+   MOBILE & TABLET RESPONSIVE
+   ========================= */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero {
+    padding: 35px 25px;
+  }
+
+  .hero-two-images .hero-images {
+    gap: 3rem;
+  }
+
+  .hero-two-images .hero-img {
+    max-width: 300px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.3rem;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero-two-images .hero-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    justify-items: center;
+  }
+
+  .hero-two-images .hero-img {
+    width: 100%;
+    max-width: 100%;
+    border-width: 3px;
+  }
+
+  /* Place 3rd image on its own row but SAME size */
+  .hero-two-images .hero-img:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .hero-text h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-two-images .hero-img {
+    max-width: 200px;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+
+
