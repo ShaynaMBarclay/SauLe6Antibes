@@ -62,3 +62,88 @@
 .contact-links a[href^="mailto"]:hover {
   color: #ffffff;
 }
+
+
+/* MEDIA QUERIES */
+
+/* Tablet: 768px – 1024px */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 70px 20px 60px;
+  }
+
+  .contact-section h3 {
+    font-size: 2rem;
+  }
+
+  .contact-section h3::after {
+    width: 50px;
+    height: 2.5px;
+    margin-top: 12px;
+  }
+
+  .contact-links {
+    gap: 20px;
+  }
+
+  .contact-links a {
+    min-width: 200px;
+    padding: 16px 22px;
+  }
+}
+
+/* Mobile: below 768px */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 15px 50px;
+  }
+
+  .contact-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section h3::after {
+    width: 45px;
+    height: 2px;
+    margin-top: 10px;
+  }
+
+  .contact-links {
+    gap: 16px;
+  }
+
+  .contact-links a {
+    min-width: 160px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile / very narrow screens: below 480px */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 50px 10px 40px;
+  }
+
+  .contact-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-section h3::after {
+    width: 40px;
+    height: 2px;
+    margin-top: 8px;
+  }
+
+  .contact-links {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links a {
+    min-width: 140px;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+}
