@@ -30,8 +30,7 @@ export default function Gallery({ images, onImageClick }) {
     imgs.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
-  }, [visibleImages]); // re-run when page changes
-
+  }, [visibleImages]); 
   return (
     <section id="gallery" className="gallery-section edgy-gallery" ref={galleryRef}>
       <h3>Sáu Snapshots</h3>
