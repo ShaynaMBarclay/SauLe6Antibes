@@ -217,6 +217,42 @@ body::-webkit-scrollbar-thumb:hover {
 /* =========================
    MOBILE & TABLET RESPONSIVE
    ========================= */
+   
+/* =========================
+   iPad Mini – force MOBILE hero layout
+   ========================= */
+@media (min-width: 768px) and (max-width: 900px) {
+  .hero-two-images .hero-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    justify-items: center;
+  }
+
+  .hero-two-images .hero-img {
+   max-width: 280px !important;
+    max-width: 100%;
+    height: auto;         
+    border-width: 3px;
+  }
+
+  /* Third image centered on its own row */
+  .hero-two-images .hero-img:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 70%;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+
+   
 
 /* Tablets & small laptops */
 @media (max-width: 1024px) {

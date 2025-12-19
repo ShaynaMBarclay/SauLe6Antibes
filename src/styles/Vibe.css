@@ -224,14 +224,18 @@
   .highlight-section {
     font-size: 1.6rem;
     padding: 30px 15px;
+    
   }
 
-  .highlight-grid {
-    gap: 15px;
+    .highlight-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
+  
   .instagram-wrapper {
     max-width: 350px;
+    align-items: center;
   }
 
   .featured-reel-container,
@@ -280,8 +284,9 @@
   }
 
   .instagram-wrapper {
-    max-width: 100%; 
+    max-width: 98%; 
     padding: 2px;
+     justify-content: center;
   }
 
 }

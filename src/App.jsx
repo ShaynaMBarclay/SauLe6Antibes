@@ -7,7 +7,7 @@ import hero2 from "./assets/images/44.jpg";
 import hero3 from "./assets/images/29.jpg";
 
 import header from "./assets/lefthero.jpg";
-import foodheader from "./assets/foodheader.jpg";
+import foodheader from "./assets/images/5.jpg";
 
 import MenuPage from "./MenuPage";
 import DrinksPage from "./DrinksPage";
