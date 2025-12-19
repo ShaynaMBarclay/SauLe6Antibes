@@ -96,6 +96,7 @@ export default function App() {
     <a href="#gallery">Gallery</a>
     <a href="#menu">Menu</a>
     <a href="#drinks">Drinks</a>
+     <a href="#contact">Contact</a>
     <a href="#find-us" className="btn-outline">Find us</a>
   </nav>
 </header>
@@ -233,6 +234,26 @@ export default function App() {
       <section id="drinks">
       <DrinksPage />
       </section>
+
+      {/* CONTACT */}
+<section className="contact-section" id="contact">
+  <h3>Contact</h3>
+
+  <div className="contact-links">
+    <a>
+      Lebaou4@gmail.com
+    </a>
+
+    <a
+      href="https://www.instagram.com/thevsnackn6_antibes/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
+  </div>
+</section>
+
 
 
      {/* FOOTER */}
