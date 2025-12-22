@@ -240,12 +240,7 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 1.2rem;
     justify-items: center;
   }
-  .language-toggle button {
-    padding: 0.3rem !important;
-    font-size: 0.7rem !important;
-  }
-
-
+  
   .hero-two-images .hero-img {
    max-width: 280px !important;
     max-width: 100%;
@@ -268,6 +263,31 @@ body::-webkit-scrollbar-thumb:hover {
     max-width: 90%;
   }
 
+}
+
+.top-language-toggle {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: transparent;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.top-language-toggle button {
+  background: transparent;
+  border: 1px solid #ffea00;
+  color: #ffea00;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.top-language-toggle button:hover {
+  background: #ffea00;
+  color: #000;
 }
 
    
@@ -326,13 +346,6 @@ body::-webkit-scrollbar-thumb:hover {
     max-width: 100%;
     border-width: 3px;
   }
-
-  .language-toggle button {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.85rem;
-    border-radius: 3px;
-  }
-
   /* Place 3rd image on its own row but SAME size */
   .hero-two-images .hero-img:nth-child(3) {
     grid-column: 1 / -1;

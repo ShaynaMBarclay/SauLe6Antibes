@@ -115,6 +115,7 @@ View this post on Instagram
 
   return (
     <div className="container">
+
       {/* NAV */}
       <header className={`nav ${navScrolled ? "nav--scrolled" : ""}`}>
         <h1
@@ -123,12 +124,6 @@ View this post on Instagram
         >
           Sáu (Le 6) Antibes
         </h1>
-
-        <div className="language-toggle">
-          <button onClick={() => setLang(lang === "fr" ? "en" : "fr")}>
-            {lang === "fr" ? "EN" : "FR"}
-          </button>
-        </div>
 
         <nav className="links">
           <a href="#gallery">{t.nav.gallery}</a>
@@ -140,6 +135,13 @@ View this post on Instagram
           </a>
         </nav>
       </header>
+
+            {/* Language Toggle at Top Center */}
+<div className="top-language-toggle">
+  <button onClick={() => setLang(lang === "fr" ? "en" : "fr")}>
+    {lang === "fr" ? "EN" : "FR"}
+  </button>
+</div>
 
       {/* HERO */}
       <section className="hero hero-two-images">

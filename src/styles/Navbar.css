@@ -125,10 +125,49 @@
   }
 
   .links .btn-outline {
-    margin-top: 10px; 
+    margin-top: 15px; 
     text-align: center;
   }
 }
+
+/* =========================
+   iPad Mini Navbar Fix
+   ========================= */
+@media (min-width: 700px) and (max-width: 820px) {
+  .nav {
+    padding: 8px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav--scrolled .logo {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;     
+    gap: 16px;         
+  }
+
+  .links a,
+  .links .btn-outline,
+  .links .btn-primary {
+    margin: 0;            
+    padding: 6px 12px;     
+    font-size: 0.85rem;      
+    vertical-align: middle;    
+  }
+  .links a:hover,
+  .btn-outline:hover,
+  .btn-primary:hover {
+    transform: scale(1.03);
+  }
+}
+
 
 @media (max-width: 480px) {
   .nav {
