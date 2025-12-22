@@ -30,6 +30,12 @@ export const translations = {
       next: "Next images",
     },
 
+    footer: {
+      address: "6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00",
+      instagram: "Instagram",
+      copyright: `© ${new Date().getFullYear()} Sáu (Le 6) Antibes. All Rights Reserved.`,
+    },
+
     findUs: "Find Us",
     contact: "Contact",
 
@@ -68,7 +74,13 @@ export const translations = {
       prev: "Images précédentes",
       next: "Images suivantes",
     },
-    
+
+     footer: {
+      address: "6 Rue Fourmillière, Antibes • Ouvert Lun–Sam 12:00–22:00",
+      instagram: "Instagram",
+      copyright: `© ${new Date().getFullYear()} Sáu (Le 6) Antibes. Tous droits réservés.`,
+    },
+
     findUs: "Nous trouver",
     contact: "Contact",
 

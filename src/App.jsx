@@ -136,7 +136,7 @@ View this post on Instagram
         </nav>
       </header>
 
-            {/* Language Toggle at Top Center */}
+            {/* Language Toggle */}
 <div className="top-language-toggle">
   <button onClick={() => setLang(lang === "fr" ? "en" : "fr")}>
     {lang === "fr" ? "EN" : "FR"}
@@ -280,28 +280,26 @@ View this post on Instagram
       </section>
 
        {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-content">
-          <p>
-            6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00
-          </p>
+     <footer className="footer">
+  <div className="footer-content">
+    <p>{t.footer.address}</p>
 
-          <div className="footer-links">
-            <a
-              href="https://instagram.com/thevsnackn6_antibes"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-          </div>
+    <div className="footer-links">
+      <a
+        href="https://instagram.com/thevsnackn6_antibes"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t.footer.instagram}
+      </a>
+    </div>
 
-          <p className="footer-copyright">
-            &copy; {new Date().getFullYear()} Sáu (Le 6) Antibes. All Rights
-            Reserved.
-          </p>
-        </div>
-      </footer>
+    <p className="footer-copyright">
+      {t.footer.copyright}
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 }
