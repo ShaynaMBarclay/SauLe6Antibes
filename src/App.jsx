@@ -202,7 +202,7 @@ View this post on Instagram
       </section>
 
       {/* GALLERY */}
-      <Gallery images={galleryImages} onImageClick={setPopupImage} />
+      <Gallery images={galleryImages} onImageClick={setPopupImage} lang={lang} t={t} />
 
       {/* LIGHTBOX / IMAGE POPUP */}
       {popupImage && (
@@ -277,10 +277,12 @@ View this post on Instagram
         </div>
       </section>
 
-      {/* FOOTER */}
+       {/* FOOTER */}
       <footer className="footer">
         <div className="footer-content">
-          <p>{t.footer}</p>
+          <p>
+            6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00
+          </p>
 
           <div className="footer-links">
             <a

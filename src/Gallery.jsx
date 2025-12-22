@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function Gallery({ images, onImageClick }) {
+export default function Gallery({ images, onImageClick, lang, t }) {
   const galleryRef = useRef();
   const [page, setPage] = useState(0);
   const [imagesPerPage, setImagesPerPage] = useState(10);
@@ -42,44 +42,52 @@ export default function Gallery({ images, onImageClick }) {
     return () => observer.disconnect();
   }, [visibleImages]);
 
+  if (!t || !t.gallery) return null; // safeguard if translations missing
+
   return (
     <section id="gallery" className="gallery-section edgy-gallery" ref={galleryRef}>
-      <h3>Sáu Snapshots</h3>
-      <p className="gallery-subtext">
-        view the full gallery{" "}
-        <a href="https://www.instagram.com/thevsnackn6_antibes/" target="_blank" rel="noopener noreferrer">
-          here
-        </a>
-      </p>
+      <h3>{t.gallery.title}</h3>
+      <p
+        className="gallery-subtext"
+        dangerouslySetInnerHTML={{ __html: t.gallery.subtext }}
+      />
 
       <div className="gallery-grid">
         {visibleImages.map((img, idx) => (
           <img
-  key={startIndex + idx}
-  src={img.desktop || img}
-  srcSet={img.mobile ? `${img.mobile} 480w, ${img.desktop} 800w` : undefined}
-  sizes="(max-width: 480px) 33vw, (max-width: 1024px) 25vw, 20vw"
-  alt={`Gallery item ${startIndex + idx + 1}`}
-  loading="lazy"
-  onClick={() => onImageClick(img)}
-  style={{
-    "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg",
-    "--fade-delay": `${idx * 0.1}s` 
-  }}
-  className="fade-in"
-  onLoad={(e) => e.target.classList.add("animate")}
-/>
+            key={startIndex + idx}
+            src={img.desktop || img}
+            srcSet={img.mobile ? `${img.mobile} 480w, ${img.desktop} 800w` : undefined}
+            sizes="(max-width: 480px) 33vw, (max-width: 1024px) 25vw, 20vw"
+            alt={`Gallery item ${startIndex + idx + 1}`}
+            loading="lazy"
+            onClick={() => onImageClick(img)}
+            style={{
+              "--initial-rotate": idx % 2 === 0 ? "-2deg" : "2deg",
+              "--fade-delay": `${idx * 0.1}s`,
+            }}
+            className="fade-in"
+            onLoad={(e) => e.target.classList.add("animate")}
+          />
         ))}
       </div>
 
       <div className="gallery-arrows">
         {hasPrev && (
-          <button className="gallery-arrow" onClick={() => setPage(page - 1)} aria-label="Previous images">
+          <button
+            className="gallery-arrow"
+            onClick={() => setPage(page - 1)}
+            aria-label={t.gallery.prev}
+          >
             ←
           </button>
         )}
         {hasNext && (
-          <button className="gallery-arrow" onClick={() => setPage(page + 1)} aria-label="Next images">
+          <button
+            className="gallery-arrow"
+            onClick={() => setPage(page + 1)}
+            aria-label={t.gallery.next}
+          >
             →
           </button>
         )}

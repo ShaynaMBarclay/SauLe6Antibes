@@ -1,12 +1,10 @@
 import menuImage from "./assets/menu.jpg"; 
 
 export default function MenuPage() {
-  
   return (
     <div className="menu-container">
       <h1 className="menu-title">Menu</h1>
 
-      
       <div className="menu-image-wrapper">
         <img
           src={menuImage}
@@ -23,14 +21,14 @@ export default function MenuPage() {
             <h3>BÁNH MÌ THỊT — 11.90€</h3>
             <p><strong>FR :</strong> Boulettes de porc ou cuisse de poulet, carotte, navet blanc, concombre, pâté de volaille, mayonnaise, sauce maison, coriandre.</p>
             <p><strong>EN :</strong> Pork meatballs or chicken thigh, carrot, white radish, cucumber, chicken pâté, mayonnaise, homemade sauce, coriander.</p>
-            <span className="allergens">Allergènes / Allergens: gluten, mollusque, soja, lait, œuf</span>
+            <span className="allergens"><strong>Allergènes / Allergens:</strong> gluten, mollusque, soja, lait, œuf / gluten, mollusk, soy, milk, egg</span>
           </div>
 
           <div className="menu-item">
             <h3>BÁNH MÌ ỐP LA — 7.90€</h3>
             <p><strong>FR :</strong> Œufs au plat, carotte, navet blanc, concombre, mayonnaise, sauce, coriandre, pâté de volaille.</p>
             <p><strong>EN :</strong> Fried eggs, carrot, white radish, cucumber, mayonnaise, sauce, coriander, chicken pâté.</p>
-            <span className="allergens">Allergènes / Allergens: gluten, œuf, soja, lactose</span>
+            <span className="allergens"><strong>Allergènes / Allergens:</strong> gluten, œuf, soja, lactose / gluten, egg, soy, lactose</span>
           </div>
         </div>
       </section>
@@ -44,7 +42,7 @@ export default function MenuPage() {
             <p><strong>FR :</strong> Vermicelles de riz, œuf, tofu, coriandre, cacahuètes, céleri, pak choï, germes de soja, champignons noirs, carottes, sauce.</p>
             <p><strong>EN :</strong> Rice vermicelli, egg, tofu, coriander, peanuts, celery, pak choi, bean sprouts, black mushrooms, carrots, sauce.</p>
             <strong>Option vegan / Vegan option: 10.90€</strong><br />
-            <span className="allergens">Allergènes / Allergens: arachide, noix, céleri, soja</span>
+            <span className="allergens"><strong>Allergènes / Allergens:</strong> arachide, noix, céleri, soja / peanut, nuts, celery, soy</span>
           </div>
 
           <div className="menu-item">
@@ -53,7 +51,7 @@ export default function MenuPage() {
             <p><strong>EN :</strong> Sticky rice, sweet & salty dried shrimp, Vietnamese sausage, Vietnamese ham, pork, egg, shredded pork, sauce.</p>
             <strong>Option poulet / Chicken option available</strong><br />
             <strong>Taille S / Size S: 6.90€</strong><br />
-            <span className="allergens">Allergènes / Allergens: crustacés, œuf, mollusque, soja, lait</span>
+            <span className="allergens"><strong>Allergènes / Allergens:</strong> crustacés, œuf, mollusque, soja, lait / shellfish, egg, mollusk, soy, milk</span>
           </div>
         </div>
       </section>
@@ -70,8 +68,8 @@ export default function MenuPage() {
 
           <div className="menu-item">
             <h3>Ramen Instantané</h3>
-            <p><strong>Option 1 :</strong> Bouillon + œuf poché — 3.90€ <br /><strong>EN :</strong> Soup broth + poached egg</p>
-            <p><strong>Option 2 :</strong> Ramen sec + œuf au plat + épices poulet — 4.50€ <br /><strong>EN :</strong> Dry ramen + fried egg + chicken spices</p>
+            <p><strong>Option 1 / Option 1 :</strong> Bouillon + œuf poché — 3.90€ / Soup broth + poached egg</p>
+            <p><strong>Option 2 / Option 2 :</strong> Ramen sec + œuf au plat + épices poulet — 4.50€ / Dry ramen + fried egg + chicken spices</p>
           </div>
         </div>
       </section>

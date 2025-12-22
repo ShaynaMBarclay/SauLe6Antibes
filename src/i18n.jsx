@@ -22,10 +22,17 @@ export const translations = {
       text:
         "It starts with crunch, ends with “holy sh*t,” and lives in the middle of Antibes.",
     },
+
+      gallery: {
+      title: "Sáu Snapshots",
+      subtext: 'View the full gallery <a href="https://www.instagram.com/thevsnackn6_antibes/" target="_blank" rel="noopener noreferrer">here</a>',
+      prev: "Previous images",
+      next: "Next images",
+    },
+
     findUs: "Find Us",
     contact: "Contact",
 
-    /* ✅ MAP BUTTONS — ADDED */
     openGoogleMaps: "Open in Google Maps",
     openAppleMaps: "Open in Apple Maps",
   },
@@ -54,6 +61,14 @@ export const translations = {
       text:
         "Ça commence par le croustillant, ça finit par “wow”, et ça vit au cœur d’Antibes.",
     },
+
+      gallery: {
+      title: "Sáu Snapshots",
+      subtext: 'Voir la galerie complète <a href="https://www.instagram.com/thevsnackn6_antibes/" target="_blank" rel="noopener noreferrer">ici</a>',
+      prev: "Images précédentes",
+      next: "Images suivantes",
+    },
+    
     findUs: "Nous trouver",
     contact: "Contact",
 

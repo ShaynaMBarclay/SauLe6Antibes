@@ -240,6 +240,11 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 1.2rem;
     justify-items: center;
   }
+  .language-toggle button {
+    padding: 0.3rem !important;
+    font-size: 0.7rem !important;
+  }
+
 
   .hero-two-images .hero-img {
    max-width: 280px !important;
@@ -262,6 +267,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.95rem;
     max-width: 90%;
   }
+
 }
 
    
@@ -319,6 +325,12 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
     max-width: 100%;
     border-width: 3px;
+  }
+
+  .language-toggle button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 3px;
   }
 
   /* Place 3rd image on its own row but SAME size */
