@@ -22,6 +22,7 @@ export const translations = {
       text:
         "It starts with crunch, ends with “holy sh*t,” and lives in the middle of Antibes.",
     },
+    flavorFeed: "Flavor Feed",
 
       gallery: {
       title: "Sáu Snapshots",
@@ -67,6 +68,8 @@ export const translations = {
       text:
         "Ça commence par le croustillant, ça finit par “wow”, et ça vit au cœur d’Antibes.",
     },
+
+    flavorFeed: "Saveurs en vidéo",
 
       gallery: {
       title: "Sáu Snapshots",
