@@ -14,15 +14,18 @@ import DrinksPage from "./DrinksPage";
 
 import Gallery from "./Gallery";
 import galleryImages from "./GalleryImages";
+import { translations } from "./i18n";
 
 import flavorFeed1 from "./assets/images/flavorfeed1.jpg";
 import flavorFeed2 from "./assets/images/flavorfeed2.jpg";
-import flavorFeed3 from "./assets/images/flavorfeed3.jpg"
+import flavorFeed3 from "./assets/images/flavorfeed3.jpg";
 
 export default function App() {
-  const [popupImage, setPopupImage] = useState(null);
+  const [popupImage, setPopupImage] = useState(null); // Lightbox state
   const [isPlaying, setIsPlaying] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
+  const [lang, setLang] = useState("fr");
+  const t = translations[lang];
 
   useEffect(() => {
     const onScroll = () => {
@@ -86,7 +89,7 @@ export default function App() {
     });
   }, []);
 
-const embedHtml1 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCMe9dBtKlv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+  const embedHtml1 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCMe9dBtKlv/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
 <div style="padding:16px;">
 <a href="https://www.instagram.com/p/DCMe9dBtKlv/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
 View this post on Instagram
@@ -94,7 +97,7 @@ View this post on Instagram
 </div>
 </blockquote>`;
 
-const embedHtml2 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DF4_f97tf9F/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+  const embedHtml2 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DF4_f97tf9F/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
 <div style="padding:16px;">
 <a href="https://www.instagram.com/p/DF4_f97tf9F/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
 View this post on Instagram
@@ -102,17 +105,13 @@ View this post on Instagram
 </div>
 </blockquote>`;
 
-const embedHtml3 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCrFRjyorfP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+  const embedHtml3 = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCrFRjyorfP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
 <div style="padding:16px;">
 <a href="https://www.instagram.com/p/DCrFRjyorfP/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
 View this post on Instagram
 </a>
 </div>
 </blockquote>`;
-
-<script async src="//www.instagram.com/embed.js"></script>
-
-
 
   return (
     <div className="container">
@@ -125,13 +124,19 @@ View this post on Instagram
           Sáu (Le 6) Antibes
         </h1>
 
+        <div className="language-toggle">
+          <button onClick={() => setLang(lang === "fr" ? "en" : "fr")}>
+            {lang === "fr" ? "EN" : "FR"}
+          </button>
+        </div>
+
         <nav className="links">
-          <a href="#gallery">Gallery</a>
-          <a href="#menu">Menu</a>
-          <a href="#drinks">Drinks</a>
-          <a href="#contact">Contact</a>
+          <a href="#gallery">{t.nav.gallery}</a>
+          <a href="#menu">{t.nav.menu}</a>
+          <a href="#drinks">{t.nav.drinks}</a>
+          <a href="#contact">{t.nav.contact}</a>
           <a href="#find-us" className="btn-outline">
-            Find us
+            {t.nav.findUs}
           </a>
         </nav>
       </header>
@@ -145,12 +150,12 @@ View this post on Instagram
         </div>
 
         <div className="hero-text">
-          <h2>Street food elevated</h2>
-          <p>Savage flavours only. Soft bread, hot fillings, zero mercy.</p>
+          <h2>{t.hero.title}</h2>
+          <p>{t.hero.subtitle}</p>
 
           <div className="hero-buttons">
             <a href="#menu" className="btn-outline">
-              View Menu
+              {t.hero.button}
             </a>
           </div>
         </div>
@@ -163,35 +168,25 @@ View this post on Instagram
         </div>
 
         <div className="vibe-text">
-          <h2>Your taste buds called and they’re done being polite.</h2>
-          <p>
-            They want bold Vietnamese flavours, sizzling toppings, and that
-            SAU-level crunch.
-          </p>
+          <h2>{t.vibe1.title}</h2>
+          <p>{t.vibe1.text}</p>
         </div>
       </section>
 
       <section className="vibe-section vibe-section-flipped">
         <div className="vibe-img-wrapper">
-          <img
-            src={foodheader}
-            alt="Modern Vietnamese Craft"
-            className="vibe-img"
-          />
+          <img src={foodheader} alt="Modern Vietnamese Craft" className="vibe-img" />
         </div>
 
         <div className="vibe-text">
-          <h2>Your favourite bite!</h2>
-          <p>
-           It starts with crunch, ends with “holy sh*t,” and lives in the
-            middle of Antibes.
-          </p>
+          <h2>{t.vibe2.title}</h2>
+          <p>{t.vibe2.text}</p>
         </div>
       </section>
 
       {/* INSTAGRAM HIGHLIGHTS */}
       <section className="highlight-section">
-        <h3>Our Flavor Feed</h3>
+        <h3>{t.flavorFeed}</h3>
 
         <div className="highlight-grid">
           <div className="highlight-item">
@@ -206,97 +201,14 @@ View this post on Instagram
         </div>
       </section>
 
-      { /* TEST */}
-      {/* INSTAGRAM HIGHLIGHTS */}
-{/* FLAVOR FEED — IMAGE LINKS 
-<section className="highlight-section highlight-images">
-  <h3>Click to view our flavor Feed</h3>
-
-  <div className="highlight-grid">
-    <a
-      href="https://www.instagram.com/p/DCMe9dBtKlv/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="image-highlight-item"
-    >
-      <img src={flavorFeed1} alt="Flavor post 1" />
-    </a>
-
-    <a
-      href="https://www.instagram.com/p/DF4_f97tf9F/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="image-highlight-item"
-    >
-      <img src={flavorFeed2} alt="Flavor post 2" />
-    </a>
-    
-
-    <a
-      href="https://www.instagram.com/p/DCrFRjyorfP/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="image-highlight-item"
-    >
-      <img src={flavorFeed3} alt="Flavor post 3" />
-    </a>
-  </div>
-</section>
-/*}
-
-
-    {/* FEATURED REEL */}
-<section className="featured-reel-section">
-  <div className="featured-reel-container">
-
-    {/* Desktop iframe */}
-    <div className="featured-reel-wrapper">
-      <iframe
-        src="https://www.instagram.com/p/DDe1e3-t_sK/embed"
-        title="Sticky Rice Reel"
-        loading="lazy"
-        width="400"
-        height="500"
-        className="desktop-reel"
-        style={{ border: "none", overflow: "hidden" }}
-        allow="fullscreen; clipboard-write; encrypted-media; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
-
-    {/* Text */}
-    <div className="featured-reel-text">
-      <h3>Let’s cook some sticky rice 🍚</h3>
-      <p>
-        Learn the secrets to perfect sticky rice like the pros! Fresh, fun,
-        and flavorful – your taste buds will thank you.
-        <br />
-        Click or Press the video to play
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-
       {/* GALLERY */}
       <Gallery images={galleryImages} onImageClick={setPopupImage} />
 
-      {/* IMAGE POPUP */}
+      {/* LIGHTBOX / IMAGE POPUP */}
       {popupImage && (
-        <div
-          className="popup-overlay"
-          onClick={() => setPopupImage(null)}
-        >
-          <div
-            className="popup-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="popup-close"
-              onClick={() => setPopupImage(null)}
-            >
+        <div className="popup-overlay" onClick={() => setPopupImage(null)}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={() => setPopupImage(null)}>
               ×
             </button>
             <img src={popupImage} alt="Full view" />
@@ -306,7 +218,7 @@ View this post on Instagram
 
       {/* LOCATION */}
       <section className="location-section" id="find-us">
-        <h3>Find Us</h3>
+        <h3>{t.findUs}</h3>
 
         <div className="location-wrapper">
           <iframe
@@ -324,7 +236,7 @@ View this post on Instagram
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            Open in Google Maps
+           {t.openGoogleMaps}
           </a>
 
           <a
@@ -333,7 +245,7 @@ View this post on Instagram
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            Open in Apple Maps
+           {t.openAppleMaps}
           </a>
         </div>
       </section>
@@ -350,7 +262,7 @@ View this post on Instagram
 
       {/* CONTACT */}
       <section className="contact-section" id="contact">
-        <h3>Contact</h3>
+        <h3>{t.contact}</h3>
 
         <div className="contact-links">
           <a>Lebaou4@gmail.com</a>
@@ -368,9 +280,7 @@ View this post on Instagram
       {/* FOOTER */}
       <footer className="footer">
         <div className="footer-content">
-          <p>
-            6 Rue Fourmillière, Antibes • Open Mon–Sat 12:00–22:00
-          </p>
+          <p>{t.footer}</p>
 
           <div className="footer-links">
             <a
