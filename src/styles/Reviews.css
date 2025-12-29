@@ -4,6 +4,14 @@
   text-align: center;
 }
 
+.review-title {
+    font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+   font-family: "Bebas Neue", sans-serif;
+}
+
 .reviews-grid {
   display: grid;
   gap: 18px;

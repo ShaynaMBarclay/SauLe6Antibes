@@ -252,10 +252,9 @@ View this post on Instagram
         </div>
       </section>
 
-      
       {/* REVIEWS */}
       <section className="reviews-section" id="reviews">
-        <h3>{lang === "fr" ? "Avis" : "Reviews"}</h3>
+        <h3 className="review-title">{lang === "fr" ? "Avis" : "Reviews"}</h3>
 
         <div className="reviews-grid">
           <div className="review-card">
