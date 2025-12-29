@@ -252,6 +252,61 @@ View this post on Instagram
         </div>
       </section>
 
+      
+      {/* REVIEWS */}
+      <section className="reviews-section" id="reviews">
+        <h3>{lang === "fr" ? "Avis" : "Reviews"}</h3>
+
+        <div className="reviews-grid">
+          <div className="review-card">
+            <div className="review-stars">★★★★★</div>
+            <p className="review-text">
+              {lang === "fr"
+                ? "“C'était un petit endroit vraiment charmant ! J'ai pris un thé au lait de taro et des ramen avec un œuf pour 11 €. C'était délicieux ! Le personnel est très gentil et serviable. Venez l'essayer !”"
+                : "“It was a really small cute place! I got a taro milk tea and ramen with an egg for €11. Apart from that it was super yummy! The guys that is there is really sweet and ready to serve. Come try it out!!!”"}
+            </p>
+            <p className="review-author">
+              {lang === "fr" ? "— Client Google" : "— Google Customer"}
+            </p>
+          </div>
+
+          <div className="review-card">
+            <div className="review-stars">★★★★★</div>
+            <p className="review-text">
+              {lang === "fr"
+                ? "“À la recherche d'un endroit où déjeuner, nous nous sommes arrêtés dans ce petit restaurant de cuisine de rue vietnamienne. Il semblait très prisé pour les plats à emporter, mais nous étions ravis de manger à l'une de leurs quelques petites tables. Nous avons commandé un banh mi thit et un taco vietnamien (ce « taco » à la feuille de riz était vraiment unique). Nos deux plats étaient délicieux, et le charmant propriétaire était ravi de répondre à nos questions en français ou en anglais.”"
+                : "“Looking for lunch, we stopped into this tiny Vietnamese street food shop. It seemed popular for takeout, but we were happy eating at one of their few low tables We ordered a banh mi thit and a Vietnamese taco (and the rice-paper taco was unlike anything we'd had before). Both our meals were delicious, and the charming gentleman running the shop was very happy to answer questions in French or English.”"}
+            </p>
+            <p className="review-author">
+              {lang === "fr" ? "— Client Google" : "— Google Customer"}
+            </p>
+          </div>
+
+          <div className="review-card">
+            <div className="review-stars">★★★★★</div>
+            <p className="review-text">
+              {lang === "fr"
+                ? "“Quel petit bijou caché ! Un endroit parfait pour un repas rapide et délicieux, loin des rues bondées du centre-ville et de la vieille ville. Ce petit restaurant vietnamien propose de délicieux thés et sandwichs… Des ingrédients frais, préparés à la commande ! Le mien était servi dans une délicieuse baguette… Essayez le thé au jasmin et le Banh mi op la ! Excellent service et personnel sympathique !”"
+                : "“What a great little hidden gem for a delicious quick bite away from the crowded little streets of city center and old town. This little Vietnamese place Serves delicious teas and sandwiches….Fresh ingredients, made to order! Mine came on a delicious baguette…try the Jasmine tea and Banh mi op la - Great service and friendly staff!”"}
+            </p>
+            <p className="review-author">
+              {lang === "fr" ? "— Client Google" : "— Google Customer"}
+            </p>
+          </div>
+        </div>
+
+        <div className="review-cta">
+          <a
+            href="https://www.google.com/search?sca_esv=d33f661f42c9ee99&sxsrf=AE3TifMiXtLCtLLOyXrbnYNBEEORxVJg5g:1767020551965&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-Ex6fWPR9S0Y7j0mAHaa7YeujqzKL3M3IC5qPbynOJP3zHMxc81JzMwCdMRmrZvnv5hoRO90hyFgstlVNK5xxB85YUmT-eWvS3PUUFbfmuisBuwFsGQ%3D%3D&q=S%C3%A1u+%28Le+6%29+Antibes+Reviews&sa=X&ved=2ahUKEwiz8L3CiOORAxU3GlkFHXpsLl0Q0bkNegQIKBAE&biw=1920&bih=911&dpr=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            {lang === "fr" ? "Laisser un avis sur Google" : "Leave a Google Review"}
+          </a>
+        </div>
+      </section>
+
       {/* MENU */}
       <section id="menu">
         <MenuPage />
